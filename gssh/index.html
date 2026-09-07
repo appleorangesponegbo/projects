@@ -12,7 +12,6 @@
 <body>
 <script>
   window.RufflePlayer = window.RufflePlayer || {};
-  window.__gameVolume = ${JSON.stringify(initialVolume)};
 
   window.addEventListener("load", () => {
     const ruffle = window.RufflePlayer.newest();
@@ -31,12 +30,6 @@
       url: 'GSSH.swf',
       ...config
     });
-
-    player.volume = window.__gameVolume;
-    window.__setVolume = function (v) {
-      window.__gameVolume = v;
-      player.volume = v;
-    };
   });
 </script>
 </body>
